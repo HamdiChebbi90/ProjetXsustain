@@ -1,0 +1,1011 @@
+{
+	"info": {
+		"_postman_id": "f9438912-354f-4673-8ab3-7e03d3c3e485",
+		"name": "integration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32055493",
+		"_collection_link": "https://orange-shadow-455432.postman.co/workspace/My-Workspace~166d5872-c977-4bbb-8ee8-02c6caa24bc5/collection/32055493-f9438912-354f-4673-8ab3-7e03d3c3e485?action=share&source=collection_link&creator=32055493"
+	},
+	"item": [
+		{
+			"name": "event",
+			"item": [
+				{
+					"name": "add event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "05/05/2025",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "event",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "bardo",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "title",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "13$",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/bidoun/Desktop/rapport/editeur _ex.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/apievent/register/65cc9ab9df89572e6071a4e7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apievent",
+								"register",
+								"65cc9ab9df89572e6071a4e7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update event",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "01/09/2000",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "rave",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "nabeul",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "titleee",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1$",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/bidoun/Pictures/Capture d’écran 2023-09-05 212744.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/apievent/update/65cd3aab8871b9f2c4abb027",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apievent",
+								"update",
+								"65cd3aab8871b9f2c4abb027"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "05/08/1999",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "rave",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "nabeul",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "fire",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "1$",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apievent/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apievent",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show event by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apievent/getbyid/65ccb1d4f4c8f998c6da8071",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apievent",
+								"getbyid",
+								"65ccb1d4f4c8f998c6da8071"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete event by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apievent/delete/65cc9195175dd8f3043b5375",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apievent",
+								"delete",
+								"65cc9195175dd8f3043b5375"
+							]
+						},
+						"description": "change event id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "feed",
+			"item": [
+				{
+					"name": "add feed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"hamma\",\r\n        \"email\":\"hamma@gmail.com\",\r\n    \"subject\":\"feeeeds\",\r\n    \"message\":\"ay haja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/apifeed/registerfeed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apifeed",
+								"registerfeed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all feeds",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apifeed/getallfeeds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apifeed",
+								"getallfeeds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete feed by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apifeed/deletefeed/65cd3dcd8871b9f2c4abb02f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apifeed",
+								"deletefeed",
+								"65cd3dcd8871b9f2c4abb02f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "news",
+			"item": [
+				{
+					"name": "add new (need user id)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "description news",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "title news",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/bidoun/Pictures/45044529_307185216536165_118823624613298176_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/apinews/register/65ccbc56d8fa95a8511c31a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apinews",
+								"register",
+								"65ccbc56d8fa95a8511c31a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update news (need news id )",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "descrrrrr",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "titfrfffff",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/bidoun/Pictures/Capture d’écran 2023-09-05 212744.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/apinews/update/65cd400b7a62cc5721941447",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apinews",
+								"update",
+								"65cd400b7a62cc5721941447"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all news",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apinews/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apinews",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show news by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apinews/getbyid/65cce496e2a8cc876fffbfda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apinews",
+								"getbyid",
+								"65cce496e2a8cc876fffbfda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete news by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apinews/delete/65cce496e2a8cc876fffbfda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apinews",
+								"delete",
+								"65cce496e2a8cc876fffbfda"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mohameddd",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mohamed@d",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/bidoun/Pictures/Screenshots/Capture d'écran 2024-01-02 014532.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/apiuser/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiuser",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apiuser/getbyid/65ccc6a7977cb9576c2bbb6e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiuser",
+								"getbyid",
+								"65ccc6a7977cb9576c2bbb6e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user info(by id user)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "hamma",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "hammmma@",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/bidoun/Pictures/Screenshots/Capture d'écran 2023-08-18 120354.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/apiuser/update/65ccc6a7977cb9576c2bbb6e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiuser",
+								"update",
+								"65ccc6a7977cb9576c2bbb6e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apiuser/delete/65cd45a57a62cc5721941451",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiuser",
+								"delete",
+								"65cd45a57a62cc5721941451"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apiuser/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiuser",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user & gen token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mohamed@d\",\r\n    \"password\":\"1234567\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/apiuser/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiuser",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user info from token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWNkNDc3YjdhNjJjYzU3MjE5NDE0NWQiLCJlbWFpbCI6Im1vaGFtZWRAZCIsImltYWdlUGF0aCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9pbWFnZXMvMTcwNzk1MTk5NTc3NS1DYXB0dXJlIGQnw4PCqWNyYW4gMjAyNC0wMS0wMiAwMTQ1MzIucG5nIiwibmFtZSI6Im1vaGFtZWRkZCIsImlhdCI6MTcwNzk1NDcyNiwiZXhwIjoxNzA3OTU4MzI2fQ.FAm5UwHgfvm32WTIPzpGIwPqka2Pv06v0tS93X7fODM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/apiuser/profile/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiuser",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Music",
+			"item": [
+				{
+					"name": "add music",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "audioFile",
+									"type": "file",
+									"src": "/C:/Users/bidoun/Downloads/Daft Punk - One More Time (Official Video) [TubeRipper.com].m4a"
+								},
+								{
+									"key": "filename",
+									"value": "daft",
+									"type": "text"
+								},
+								{
+									"key": "originalname",
+									"value": "daftpunk",
+									"type": "text"
+								},
+								{
+									"key": "mimetype",
+									"value": "basic",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/apimusic/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apimusic",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all music",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "filename",
+									"value": "mouzika",
+									"type": "text"
+								},
+								{
+									"key": "originalname",
+									"value": "yess",
+									"type": "text"
+								},
+								{
+									"key": "mimetype",
+									"value": "no",
+									"type": "text"
+								},
+								{
+									"key": "audioFile",
+									"type": "file",
+									"src": "/C:/Users/bidoun/Downloads/Daft Punk - One More Time (Official Video) [TubeRipper.com].m4a"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/apimusic/update/65cdea5a82af29c70c09e621?filename&originalname&mimetype&audioFile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apimusic",
+								"update",
+								"65cdea5a82af29c70c09e621"
+							],
+							"query": [
+								{
+									"key": "filename",
+									"value": null
+								},
+								{
+									"key": "originalname",
+									"value": null
+								},
+								{
+									"key": "mimetype",
+									"value": null
+								},
+								{
+									"key": "audioFile",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delte music",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apimusic/delete/65cdea5a82af29c70c09e621",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apimusic",
+								"delete",
+								"65cdea5a82af29c70c09e621"
+							],
+							"query": [
+								{
+									"key": "filename",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "originalname",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "mimetype",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "audioFile",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "playlist",
+			"item": [
+				{
+					"name": "add playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"musicIds\": [\"65ce0471920cf3e143f2bb79\"],\r\n    \"title\": \"Your Playlist Title\",\r\n    \"duration\": 3600,\r\n    \"startTime\": 1626157200000,\r\n    \"genre\": \"Your Genre\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/apiplaylist/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiplaylist",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update playlist by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"musicIds\": [\"65ce0471920cf3e143f2bb79\",\"65ce0f544d1a7494246de7d7\"],\r\n    \"title\": \"Your  Title\",\r\n    \"duration\": 3600,\r\n    \"startTime\": 196815,\r\n    \"genre\": \"Your Genre\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/apiplaylist/update/65ce0868ffc7fb5b22759042",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiplaylist",
+								"update",
+								"65ce0868ffc7fb5b22759042"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apiplaylist/delete/65ce03c4f76ab636bec37304",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apiplaylist",
+								"delete",
+								"65ce03c4f76ab636bec37304"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get music playlist",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "send message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"titre\",\r\n    \"content\":\"contenu\",\r\n    \"receiver\":\"65ccbc56d8fa95a8511c31a2\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/apimessage/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apimessage",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get msg",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete (recId/msgId)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/apimessage/delete/65ccbc56d8fa95a8511c31a2/65cf3dca241d29b05c244c94",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"apimessage",
+								"delete",
+								"65ccbc56d8fa95a8511c31a2",
+								"65cf3dca241d29b05c244c94"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

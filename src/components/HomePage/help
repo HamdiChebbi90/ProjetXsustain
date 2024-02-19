@@ -1,0 +1,191 @@
+  
+  import React, { useState } from "react";
+  import bg from "../../assets/images/bg.png";
+  import logo from "../../assets/images/logo.png";
+  import logo2 from "../../assets/images/logo2.png";
+  import right from "../../assets/images/right.png";
+  import anime from "../../assets/images/anime.png";
+  import cartoon from "../../assets/images/cartoon.png";
+  import qr from "../../assets/images/qr.png";
+  import "./style.css";
+  import { Link } from "react-router-dom";
+  // import { AiFillFacebook, AiFillInstagram, AiFillYoutube } from "react-icons/ai";
+  import Marquee from "react-fast-marquee";
+  import Banner from "../banner/Banner";
+  import img1 from "../../assets/slider/1.png";
+  import img2 from "../../assets/slider/2.png";
+  import img3 from "../../assets/slider/3.png";
+  import fb from "../../assets/icon/fb.svg";
+  import insta from "../../assets/icon/inst.svg";
+  import yt from "../../assets/icon/youtube.svg";
+  import fb1 from "../../assets/icon/fb1.svg";
+  import insta1 from "../../assets/icon/inst1.svg";
+  import twitter from "../../assets/icon/twitter.svg";
+  
+  
+
+
+
+
+
+
+
+
+  const [Listen, setListen] = useState(null);
+  const [Contact, setContact] = useState(null);
+  const [GetApp, setGetApp] = useState(null);
+  const [Home, setHome] = useState(true);
+  
+  
+  <div className="nav">
+            <ul className="navbar__links">
+              <div className="left_item">
+                <li className="navbar__links__item">
+                  <Link
+                    onClick={() => {
+                      setListen(true);
+                      setHome(null);
+                      setContact(null);
+                      setGetApp(null);
+                    }}
+                  >
+                    LISTEN LIVE
+                  </Link>
+                </li>
+                <li className="navbar__links__item">
+                  <Link
+                    onClick={() => {
+                      setContact(true);
+                      setHome(null);
+                      setGetApp(null);
+                      setListen(null);
+                    }}
+                  >
+                    CONTACT US
+                  </Link>
+                </li>
+                <li className="navbar__links__item">
+                  <Link
+                    onClick={() => {
+                      setGetApp(true);
+                      setHome(null);
+                      setContact(null);
+                      setListen(null);
+                    }}
+                  >
+                    GET THE APP
+                  </Link>
+                </li>
+              </div>
+
+              <div className="right_icon">
+                <li className="navbar__links__icon">
+                  <img src={insta} alt="insta" />
+                </li>
+                <li className="navbar__links__icon">
+                  <img src={yt} alt="yt" />
+                </li>
+
+                <li className="navbar__links__icon">
+                  <img src={fb} alt="fb" />
+                </li>
+              </div>
+            </ul>
+          </div>
+          {Home ? (
+            <>
+              <div className="slider">
+                <img src={img1} alt="1" />
+                <img src={img2} alt="2" />
+                <img src={img3} alt="3" />
+              </div>
+              <div className="fol">
+                <Marquee className="follow">
+                  FOLLOW FOR MORE FOLLOW FOR MORE FOLLOW FOR MORE FOLLOW FOR
+                  MORE FOLLOW FOR MOREFOLLOW FOR MORE FOLLOW FOR MORE
+                </Marquee>
+              </div>
+              <div className="stream">
+                <video width="100%" height="100%" controls>
+                  <source src="movie.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </>
+          ) : null}
+          {Listen ? (
+            <>
+              <div className="home">
+                <h1>HOME</h1>
+                <p>
+                  Streetz Turkia is a new Hip-Hop station that brings you the
+                  latest Hip-Hop music and culture. We are the voice of the
+                  streets, and we give the people what they want. We are the
+                  streets!
+                </p>
+              </div>
+            </>
+          ) : null}
+          {Contact ? (
+            <>
+              <div className="container_contact">
+                <div className="contact">
+                  <div className="contact__left">
+                    <img src={logo2} width="20%" alt="logo_contact" />
+                    <p>Streetz Turkia New Hip-Hop Station</p>
+                    <div className="contact__left__icons">
+                      <img src={fb1} alt="fb" />
+                      <img src={insta1} alt="insta" />
+                      <img src={twitter} alt="twitter" />
+                    </div>
+                  </div>
+                  <div className="contact__down">
+                    <h1>TEXT US!</h1>
+                    <form>
+                      <input type="text" placeholder="Your Name *" />
+                      <input type="email" placeholder="Your Email*" />
+                      <input type="text" placeholder="Subject*" />
+                      <textarea placeholder="Your Message*" />
+                      <button>Send</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : null}
+          {GetApp ? (
+            <>
+              <div className="getapp">
+                <div className="getapp__left__img">
+                  <img src={cartoon} alt="cartoon" />
+                  <div
+                    style={{ position: "relative", display: "inline-block" }}
+                  >
+                    <img
+                      src={anime}
+                      alt="anime"
+                      className="anime"
+                      style={{ width: "100%", height: "100%" }}
+                    />
+                    <div className="getapp_left_pos">
+                      
+                    </div>
+                    <img
+                      src={qr}
+                      alt="qr"
+                      className="qr"
+                      style={{
+                        position: "absolute",
+                        top: "70%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        width: "30%",
+                        height: "30%",
+                      }}
+                      />
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : null}
+        </div>
